@@ -13,4 +13,12 @@
         <tr><td colspan=2><input type="submit" value="Submit"></td></tr>
     </table>
   </form>
+  @if ($errors->any())
+    <ul>
+    @foreach($errors->all() as $error)
+      <li>{{$error}}</li>
+    @endforeach
+    </ul>
+  @endif
+
 @endsection
